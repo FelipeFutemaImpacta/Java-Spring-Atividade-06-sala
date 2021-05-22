@@ -1,8 +1,10 @@
- Transforme a tabela produto em um classe separada no pacote br.com.impacta.models
+Transforme a tabela produto em uma classe separadas
+no pacote br.com.impacta.models
+
  
  Tabela de produto
  
- 	CodigoProduto			Descrição do Produto				Valor do Produto
+ CodigoProduto	descrição do Produto		Valor do Produto
 	1				Camisa						70.00
 	2				Shorts						57.50
 	3				Meia						9.99
@@ -11,14 +13,19 @@
 
 -----------------------------------------------------------------
 
-Em seguida crie um método na classe Produto onde o mesmo tenho o nome de montarResumo
+Após criar a classe produto, crie objetos para representar as linhas da tabela.
+Deixarei um de exemplo.
+
+
+Em seguida crie um método estatico na classe Produto onde o mesmo tenho o nome de buscarProdutoPèloId
 Exemplo de um método estatico:
-public String falar(String palavra) {
-	System.out.println(palavra);
+
+public static Produto buscarProdutoPeloId(ArrayList<Produto> listaDeProdutos, int codigoProduto) {
+	System.out.println("exemplo");
 }
 
-receba como parametro um Produto e devolva uma String
+receba como parametro uma lista de produtos e um codigo do produto
 
-O retorno deve ser no seguinte formato:
+E devolva um objeto do Tipo Produto caso nao encontre nenhum retorne nulo
 
-"codigo: <produto.codigo>, descricao: <produto.descricao>, valor: <produto.valor>"
+		 * (return null;)
